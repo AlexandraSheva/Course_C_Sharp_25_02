@@ -1,6 +1,6 @@
-﻿// 4. Задайте двумерный массив. Введите элемент, и найдите первое его вхождение,
-// выведите позиции по горизонтали и вертикали, или напишите, что такого элемента нет.
-
+﻿// Задача 2. Написать программу, которая принимает позицию элемента в двумерном массиве,
+//и возвращает значение этого элемента или же указание, 
+// что такого элеметна нет. 
 
 void Print(int[,] arr)
 {
@@ -27,14 +27,14 @@ int[,] MassNums(int row, int column, int from, int to)
   return arr;
 }
 
-string Example(int[,] array, int num)
+string Example(int[,] array, int a, int b)
 {
   for (int i = 0; i < array.GetLength(0); i++)
   {
     for (int j = 0; j < array.GetLength(1); j++)
     {
-      if (array[i, j] == num)
-        return $"{i + 1} {j + 1}";
+      if (array[i, j] == array[a - 1, b - 1])
+        return $"{array[i, j]}";
     }
   }
   return "Нет";
@@ -47,6 +47,7 @@ int stop = int.Parse(Console.ReadLine()!);
 
 int[,] mass = MassNums(num_row, num_column, start, stop);
 Print(mass);
-int num = int.Parse(Console.ReadLine()!);
-string summ = Example(mass, num);
+int num_1 = int.Parse(Console.ReadLine()!);
+int num_2 = int.Parse(Console.ReadLine()!);
+string summ = Example(mass, num_1, num_2);
 Console.WriteLine(summ);
