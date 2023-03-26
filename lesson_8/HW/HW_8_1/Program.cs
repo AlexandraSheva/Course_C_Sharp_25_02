@@ -77,5 +77,5 @@ int stop = int.Parse(Console.ReadLine()!);
 
 int[,] mass = MassNums(num_row, num_column, start, stop);
 Print(mass);
-MinA(mass);
-Without(mass);
+int[] ind_1 = MinA(mass);
+Without(mass,ind_1);
