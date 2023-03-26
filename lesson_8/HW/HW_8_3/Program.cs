@@ -65,5 +65,5 @@ int stop = int.Parse(Console.ReadLine()!);
 
 int[,] mass = MassNums(num_row, num_column, start, stop);
 Print(mass);
-SumNum(mass);
-FindMin(mass);
+int[] mass_2 = SumNum(mass);
+FindMin(mass_2);
