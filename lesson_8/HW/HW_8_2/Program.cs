@@ -1,6 +1,7 @@
 ﻿// Задача 2. Задать двумерный массив. Написать программу, которая упорядочит по убыванию
 //элементы каждой строки.
 
+
 void Print(int[,] arr)
 {
   int row = arr.GetLength(0);
@@ -37,7 +38,7 @@ void MinEl(int[,] arr)
     {
       for (int k = 0; k < column - j - 1; k++)
         if (arr[i, k] < arr[i, k + 1])
-            (arr[i, k],arr[i, k + 1] = arr[i, k + 1],arr[i, k]);
+          (arr[i, k], arr[i, k + 1]) = (arr[i, k + 1], arr[i, k]);
     }
   }
 }
@@ -55,5 +56,6 @@ int stop = int.Parse(Console.ReadLine()!);
 int[,] mass = MassNums(num_row, num_column, start, stop);
 Print(mass);
 MinEl(mass);
+Print(mass);
 
 
